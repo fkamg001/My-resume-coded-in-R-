@@ -1,0 +1,32 @@
+section,in_resume,title,loc,institution,start,end,description_1,description_2,description_3,description_4,description_5,description_6,description_7,description_8,description_9,description_10,description_11,description_12,description_13
+education,TRUE,MSc in Applied Statistics and Datamining,University of St Andrews,St Andrews,2018,2019,"The course emphasis was upon practical analysis of big data and the extraction of answers from real-life data by
+applying programming languages including R, Python, SAS, and SQL",,,,,,,,,,,,
+education,TRUE,"BSc Politics, Philosophy and Economics ","Goldsmiths, University of London - First Class Honours",London,2015,2018,"This technical degree programme helped me to gain a solid grounding in quantitative methods such as
+econometrics and develop analytical and statistical techniques to formulate an evidence-based analysis",,,,,,,,,,,,
+education,TRUE ,"A-Level
+","City of Oxford College
+",Oxford,2013,2015,"A-levels: Mathematics (B), Economics (B), Languages (A*)",,,,,,,,,,,,
+relevant_projects,TRUE ,University of St Andrews,,,2018,2019,"Developed an automatic credit card approval model using machine learning techniques in Python to predict
+whether individual's application for a credit card will be accepted","Build Random Forest and regression trees models in R programming to predict location, date and time that
+New York tax drivers earn the most value of fares and tips","Extracted financial news headlines for Tesla and Facebook stocks using NLP and sentiment analysis in Python to
+make informed guesses on how certain stocks will perform","Processed a large real-estate dataset in near real time by running machine learning models utilising Amazon
+Kinesis Streams and Spark on Amazon EMR to develop shopping personalisation, ad targeting and update buyers
+and sellers with the estimated values","Deployed Amazon SageMaker using popular XGBoost ML algorithm to predict whether a customer will enrol for
+certificate of despite offered by a bank","Modelled correlated data using Generalised Estimating Equations (GEEs) in SAS to measure the hydration of the
+outer layer skin of a sample of patients before and repeatedly after the application of a pharmaceutical product","Used Natural Language Processing (NLP) toolkits such as NLTK, Gensim, NumPy and Scikit-learn to create a machine
+learning classifier predicting whether a tweet came from President Trump or Prime Minister Trudeau","Examined the relationship between maximum heart rates during exercises and possibility of heart diseases by
+applying multiple logistic regressions in R programming","Performed Market Basket Analysis (MBA) on transaction data leveraging Tableau and Power BI to discover and
+understand what items customers purchase together",Conducted a k-means cluster analysis to investigate and visualise salary potential of university degrees in R programming,Launched an Amazon EMR cluster using a HiveQL script to analyse sample log data stored in Amazon S3 bucket,"Predicted the impact of climate change on birds populations in Scottish Highland using spatial data and
+generalised logistic regression with elastic net regularisation (glmnet) in R programming",
+industry_positions,TRUE ,Finance Internship,NatWest Business Bank,Oxford,2016,2017,"Developed an end-to-end machine leaning model leveraging MLlib in pySpark to determine if loan applicants are
+capable of repaying their loans","Build machine learning algorithms by training Extreme Gradient Descent Boosted Decision Tree models
+(XGBoost) in Python to predict interest rate assigned to clients' loans",Utilised Tableau to analyse lending across geographies with interactive dashboards,"Analysed clickstream data by implementing Random Forest and Ensemble techniques to identify potential clients
+visiting the website and display customised contents which cater to their needs",,,,,,,,,
+industry_positions,TRUE ,Data Anayst - Health Economics,Adelphi Values |PROVE ,Manchester,2019,Present,Utilised Excel VBA Macro to develop multi-indication budget impact model to evaluate the financial impact of adding new pharmaceutical products into the market,Used Natural language processing techniques in Python to analyse medical literature reviews and link relevant papers together for researchers,Employed deep convolutional neural networks (CNNs) to train algorithms capable of detecting skin cancer or melanoma using images of skin lesions  ,Applied K-Neighbours Classifiers to predict the presence/absence of heart diseases providing insights for healthcare providers to adapt their diagnosis and treatment,,,,,,,,,
+further_work_experience,TRUE ,Co-director of student-led department,Political Economy Research Centre (PERC),London,2017,2018,"Organised events on the subject of blockchain, cryptocurrency and their potential to disrupt monetary system",Contributed to write a report of 'Festival for New Economic Thinking' in Edinburgh,Organised seven events and two conferences over the past two years with 500 attendees,,,,,,,,,,
+further_work_experience,TRUE ,"Room Attendant
+","The Old Course Hotel, Golf Resort & Spa
+",St. Andrews,2018,2019,"Worked up to 20 hours per week as part of the best housekeeping team in the UK at the five star Old Course Hotel
+",,,,,,,,,,,,
+additional_qualifications,TRUE ,DataCamp,[datacamp.com](https://www.datacamp.com/about/),,2018,2019,Natural Language Processing Fundamentals in Python,Deep Learning in Python,Machine Learning with Tree-Based Models in R,Nonlinear Modeling in R with GAMs,Introduction to SQL,,,,,,,,
+additional_qualifications,TRUE ,LinkedIn,[learning.linkedin.com](https://learning.linkedin.com/certification-and-continuing-education-programs),,2018,2019,Applied Machine Learning: Foundations,SAS Essential Training: 1 Descriptive Analysis for Healthcare Research,SAS Essential Training: 2 Regression Analysis for Healthcare Research,,,,,,,,,,

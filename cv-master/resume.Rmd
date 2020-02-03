@@ -1,0 +1,228 @@
+---
+title: Farzam Kamgar's CV"
+author: Farzam Kamgar
+date: "`r Sys.Date()`"
+output: 
+  pagedown::html_resume:
+    css: ['css/custom_resume.css', 'css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+---
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+library(tidyverse)
+library(glue)
+
+# Set this to true to have links turned into footnotes at the end of the document
+PDF_EXPORT <- FALSE
+
+# Holds all the links that were inserted for placement at the end
+links <- c()
+
+source('parsing_functions.R')
+
+
+# First let's get the data, filtering to only the items tagged as
+# Resume items
+position_data <- read_csv('positions.csv') 
+#%>% 
+#   filter(in_resume) %>% 
+#   mutate(
+#     # Build some custom sections by collapsing others
+#     section = case_when(
+#       section %in% c('relevant_projects', 'additional_projects') ~ 'projects', 
+#       section %in% c('industry_positions', 'further_work_experience') ~ 'positions',
+#       TRUE ~ section
+#     )
+#   ) 
+
+```
+
+
+Aside
+================================================================================
+<img src="beta_dist.png">
+
+
+<p style="font-size:1.5em;font-family:georgia">Contact</p>
+--------------------------------------------------------------------------------
+<i class="fa fa-envelope"></i> fk46@st-andrews.ac.uk
+
+<i class="fa fa-linkedin"></i> [Farzam-Kamgar](https://www.linkedin.com/in/farzam-kamgar-78579999/?originalSubdomain=uk)
+
+<i class="fa fa-github"></i> [github.com/fkamg001](https://github.com/fkamg001)
+
+<i class="fa fa-twitter"></i> [Farzam_Kamgar](https://twitter.com/Farzam_Kamgar?lang=en-gb)
+
+<i class="fa fa-phone"></i> (+44) 7423 226364
+
+<p style="font-size:1.5em;font-family:georgia">Language Skills</p>
+--------------------------------------------------------------------------------
+```{r}
+skills_1 <- tribble(
+  ~skill,               ~level,
+  "R",                  4.5,
+  "Python",             4.5,
+  "SAS",                4.5,
+  "SQL",                4,
+  "VBA Macro",          4  
+ )
+
+build_skill_bars(skills_1)
+```
+<p style="font-size:1.5em;font-family:georgia"> Visualization</p>
+--------------------------------------------------------------------------------
+```{r}
+skills_2 <- tribble(
+  ~skill,               ~level,
+  "Tableau",            4.5,
+  "shiny",              4.5,
+  "ggplot",             4.5,
+  "Plotly",             4,  
+  "Highcharts",         4,
+  "matplotlib",         4,
+  "Power BI",           4,
+  )
+
+build_skill_bars(skills_2)
+```
+
+<p style="font-size:1.5em;font-family:georgia">Distributed Computing</p>
+--------------------------------------------------------------------------------
+```{r}
+skills_3 <- tribble(
+  ~skill,        ~level,
+  "Spark SQL",    4,
+  "Spark ML",     4,
+  "AWS",          4, 
+  "EC2",          3.5,      
+  "S3",           3.5,
+  "EMR",          3.5
+  
+  )
+
+build_skill_bars(skills_3)
+```
+::: aside
+<p style="font-size:1.5em;font-family:georgia">Open Source</p>
+--------------------------------------------------------------------------------
+<i class="fas fa-info-circle"></i> Projects available @ github.com/fkamg001
+
+<i class="fas fa-user-edit"></i> Updated `r Sys.Date()`
+:::
+
+Main
+================================================================================
+
+Farzam Kamgar {#title}
+--------------------------------------------------------------------------------
+
+```{r}
+intro_text <- "Data Analyst with 2+ years of experience executing data-driven solutions to increase efficiency, accuracy, and utility of internal data processing. Experienced at building machine learning models, using predictive data modeling, and analyzing data mining algorithms to deliver insights and implement action-oriented solutions to complex business problems."
+cat(sanitize_links(intro_text))
+```
+
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+```{r}
+print_section(position_data, 'education')
+```
+
+Relevant Projects and Skills {data-icon=chart-line}
+--------------------------------------------------------------------------------
+```{r}
+print_section(position_data, 'relevant_projects')
+```
+
+\newpage
+
+
+Relevant Work Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+::: aside
+<p style="font-size:1.5em;font-family:georgia">More info</p>
+--------------------------------------------------------------------------------  
+<i class="fas fa-briefcase"></i> [Adelphi Values | PROVE](https://www.adelphivalues.com/practices/prove/health-economics-and-data-analysis/)
+
+<i class="fas fa-piggy-bank"></i> [Natwest Banking](https://www.business.natwest.com/business/loan-and-finance.html?intcam=HP-B-TB-DEF-Default)
+
+<i class="fas fa-info-circle"></i> Due to nature of the industries, no codes can be shared.
+
+
+
+
+<p style="font-size:1.5em;font-family:georgia">References</p>
+-------------------------------------------------------------------------------- 
+<i class="fa fa-phone"></i> [Adelphi Values | PROVE](https://www.adelphivalues.com/contact-us/)
+
+<i class="fa fa-envelope"></i> <a href="mailto:abdul.sadek@natwest.com"> NatWest Bank</a>
+:::
+```{r}
+print_section(position_data, 'industry_positions')
+```
+
+Further Work Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+::: aside
+
+<p style="font-size:1.5em;font-family:georgia">More info</p>
+--------------------------------------------------------------------------------
+<i class="fab fa-youtube"></i> [conferences](https://www.youtube.com/channel/UChZpJfZ5W68e7TKXkJlsYnw)
+
+<i class="fab fa-youtube"></i> [Event on blockchain](https://www.youtube.com/channel/UChZpJfZ5W68e7TKXkJlsYnw)
+
+<i class="fas fa-edit"></i> [Publication](http://www.perc.org.uk/project_posts/report-festival-new-economic-thinking/)
+
+
+
+<p style="font-size:1.5em;font-family:georgia">References</p>
+--------------------------------------------------------------------------------
+<i class="fa fa-phone"></i> [PERC | Dr Will Davies](https://www.gold.ac.uk/politics-and-international-relations/staff/davies/)
+
+<i class="fa fa-envelope"></i> <a href="mailto:sarah.middlemas@oldcoursehotel.co.uk"> The Old Course Hotel</a>
+:::
+
+```{r}
+print_section(position_data, 'further_work_experience')
+```
+
+
+Additional Qualifications {data-icon=certificate}
+--------------------------------------------------------------------------------
+::: aside
+<p style="font-size:1.5em;font-family:georgia">Certificates</p>
+--------------------------------------------------------------------------------
+<i class="fab fa-python"></i> [NLP Fundamentals](https://www.datacamp.com/statement-of-accomplishment/course/be6d573f7730954f93d2f9695b1c55f63ac286b6)
+
+<i class="fab fa-python"></i> [Deep Learning ](https://www.datacamp.com/statement-of-accomplishment/course/473a8c5c4039036275f86ead614d2ac593d21f60?share=1)
+
+<i class="fab fa-python"></i> [Applied ML](http://www.linkedin.com/learning/applied-machine-learning-foundations)
+
+<i class="fab fa-r-project"></i> [ML in Tree-Based Models](https://www.datacamp.com/statement-of-accomplishment/course/cbe3ccb97b17fa26d1b21e1bdc5738bd341ba0fd)
+
+<i class="fab fa-r-project"></i> [GAMs in R](https://www.datacamp.com/statement-of-accomplishment/course/e3ed7c3c7ebcf4f894d3550846fa3140ce076f85)
+
+<i class="fas fa-stamp"></i> [Intro to SQL](https://www.datacamp.com/statement-of-accomplishment/course/4d9c8a4e8cef8a83aacfa59ad8b8051d941df23d)
+
+<i class="fas fa-stamp"></i> [SAS for Healthcare Research](http://www.linkedin.com/learning/sas-essential-training-2-regression-analysis-for-healthcare-research)
+
+Built with <i class="fab fa-r-project"></i> [**pagedown**](https://github.com/rstudio/pagedown) 
+
+<i class="fas fa-file-code"></i> Source code:   [github.com/fkamg001/cv](https://github.com/fkamg001?tab=repositories)
+
+<i class="fas fa-user-edit"></i> Updated `r Sys.Date()`
+:::
+
+```{r}
+print_section(position_data, 'additional_qualifications')
+```
+
+
